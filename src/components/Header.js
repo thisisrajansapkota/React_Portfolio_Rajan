@@ -1,40 +1,42 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function Header() {
   return (
-      <header className="primary-header" id="home">
-        <div className="left">
-          <div>
-            <h1>Rajan</h1>
-          </div>
-          <div className="line"></div>
-          <div>
-            <h1>Web Developer</h1>
-          </div>
+    <header className="primary-header" id="home">
+      <div className="left">
+        <div>
+          <h1>Rajan</h1>
         </div>
-        <div className="right">
-          <input type="checkbox" id="check" />
-          <label htmlFor="check" className="menu-icon">
-            <i className="fa-solid fa-bars"></i>
-          </label>
+        <div className="line"></div>
+        <div>
+          <h1>Web Developer</h1>
+        </div>
+      </div>
+      <div className="right">
+        <input type="checkbox" id="check" />
+        <label htmlFor="check" className="menu-icon">
+          <i className="fa-solid fa-bars"></i>
+        </label>
 
-          <ul className="navigation">
-            <li>
-              <a href="#skills">Skills</a>
+        <ul className="navigation">
+          <li>
+            <Link to={"/skills"}>Skills</Link>
+          </li>
+          <li>
+            <Link to={"/projects"}>Projects</Link>
+            </li>
+             <li> <Link to={"/about"}>About</Link>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <Link to={"/contact"}>Contact</Link>
             </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </header>
-  )
+
+ 
+        </ul>
+      </div>
+    </header>
+  );
 }
 
 export default Header
